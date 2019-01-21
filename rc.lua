@@ -70,7 +70,7 @@ local binds = require "binds"
 
 local settings = require "settings"
 require "settings_chrome"
-
+settings.window.home_page = "goosh.org"
 ----------------------------------
 -- Optional user script loading --
 ----------------------------------
@@ -124,6 +124,17 @@ end)
 
 -- Add vimperator-like link hinting & following
 local follow = require "follow"
+
+-- Match hints using letters
+local select = require "select"
+
+select.label_maker = function ()
+    local chars = charset("asdfqwerzxcv")
+    return trim(sort(reverse(chars)))
+end
+
+-- Uncomment if you want to ignore case when matching
+follow.ignore_case = true
 
 -- Add command history
 local cmdhist = require "cmdhist"
