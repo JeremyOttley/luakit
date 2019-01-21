@@ -75,6 +75,9 @@ require "settings_chrome"
 -- Optional user script loading --
 ----------------------------------
 
+-- Add Vertical Tabs
+local vertical_tabs = require "vertical_tabs"
+
 -- Add adblock
 local adblock = require "adblock"
 local adblock_chrome = require "adblock_chrome"
