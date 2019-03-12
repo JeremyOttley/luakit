@@ -25,9 +25,9 @@ end)
 require "unique_instance"
 
 -- Set the number of web processes to use. A value of 0 means 'no limit'.
-luakit.process_limit = 4
+luakit.process_limit = 0
 -- Set the cookie storage location
-soup.cookies_storage = luakit.data_dir .. "/cookies.db"
+--soup.cookies_storage = luakit.data_dir .. "/cookies.db"
 
 -- Load library of useful functions for luakit
 local lousy = require "lousy"
